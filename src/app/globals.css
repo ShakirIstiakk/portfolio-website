@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #0D392C;
+    --color-forest-dark: #07221A;
+    --color-ivory: #F7F5EF;
+    --color-ivory-light: #FDFAF5;
+    --color-ivory-dark: #ECE8DC;
+    --color-gold: #C8A96B;
+    --color-gold-light: #DFC793;
+    --color-gold-dark: #9F8043;
+    --color-ink: #111B17;
+    --color-ink-muted: #4A5A53;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-forest);
+    color: var(--color-ivory);
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #EFECE2;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0D392C;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C8A96B;
+  }
+}
+
+/* Editorial subtle noise overlay */
+.bg-editorial-grain {
+  background-image: radial-gradient(rgba(13, 57, 44, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-dark-grain {
+  background-image: radial-gradient(rgba(200, 169, 107, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Border styles */
+.border-forest-subtle {
+  border-color: rgba(13, 57, 44, 0.12);
+}
+
+.border-gold-subtle {
+  border-color: rgba(200, 169, 107, 0.35);
+}
+
+.border-dark-subtle {
+  border-color: rgba(247, 245, 239, 0.12);
+}
+
+/* Subtle magnetic / editorial hover */
+.editorial-card-hover {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 169, 107, 0.6);
+}
+
+/* Marquee track */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+}
+
+.animate-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee-track {
+    animation: none !important;
+  }
+}
