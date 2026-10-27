@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export-zip": "next build && powershell -Command \"Copy-Item 'public/.htaccess' 'out/.htaccess' -Force; Compress-Archive -Path 'out/*' -DestinationPath 'website-deploy.zip' -Force\"",
     "start": "next start",
     "lint": "next lint"
   },
