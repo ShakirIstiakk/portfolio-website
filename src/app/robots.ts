@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://shakiristiak.com/sitemap.xml",
+    sitemap: "https://shakiristiak.fyi/sitemap.xml",
   };
 }

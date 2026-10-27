@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shakiristiak.com"),
+  metadataBase: new URL("https://shakiristiak.fyi"),
   title: {
     default: "Shakir Istiak — Web Designer, WordPress Developer & Digital Growth Specialist",
     template: "%s | Shakir Istiak",
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     "Elementor Pro Developer",
     "High-converting landing pages",
   ],
-  authors: [{ name: "Shakir Istiak", url: "https://shakiristiak.com" }],
+  authors: [{ name: "Shakir Istiak", url: "https://shakiristiak.fyi" }],
   creator: "Shakir Istiak",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shakiristiak.com",
+    url: "https://shakiristiak.fyi",
     title: "Shakir Istiak — Web Designer, WordPress Developer & Digital Growth Specialist",
     description:
       "Helping coaches, founders, and growing brands turn better websites into better business with bespoke WordPress engineering, CRO, and performance marketing.",
@@ -70,9 +70,9 @@ export default function RootLayout({
     "@type": "Person",
     name: "Shakir Istiak",
     jobTitle: "Web Designer & WordPress Developer & Digital Marketing Specialist",
-    url: "https://shakiristiak.com",
+    url: "https://shakiristiak.fyi",
     email: "istiakzy@gmail.com",
-    image: "https://shakiristiak.com/images/shakir-istiak.jpg",
+    image: "https://shakiristiak.fyi/images/shakir-istiak.jpg",
     description:
       "Web Designer, WordPress Developer & Digital Marketing Specialist helping startups, small businesses and growing brands generate leads, improve conversions and build stronger online presence.",
     knowsAbout: [
